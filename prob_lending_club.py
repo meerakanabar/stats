@@ -5,9 +5,6 @@ loansData = pd.read_csv('https://spark-public.s3.amazonaws.com/dataanalysis/loan
 
 loansData.dropna(inplace=True)
 
-import matplotlib.pyplot as plt
-import pandas as pd
-
 loansData.boxplot(column='Amount.Funded.By.Investors')
 
 plt.savefig("boxplotInvestorsFunding.png")
@@ -21,15 +18,10 @@ plt.figure()
 graph = stats.probplot(loansData['Amount.Funded.By.Investors'], dist="norm", plot=plt)
 plt.savefig("ProbabilityPlotInvestorsFunding.png")
 
-import matplotlib.pyplot as plt
-import pandas as pd
-
 loansData = pd.read_csv('https://spark-public.s3.amazonaws.com/dataanalysis/loansData.csv')
 
 loansData.dropna(inplace=True)
 
-import matplotlib.pyplot as plt
-import pandas as pd
 
 loansData.boxplot(column='Amount.Requested')
 
